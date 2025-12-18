@@ -2,7 +2,7 @@
 
 
 html, body {
-    background-color: #d691e1 !important; /* strong rule to ensure it displays */
+    background-color: #eccdf1 !important; /* strong rule to ensure it displays */
 }
 
 body {
@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
 	margin: 0;
 	padding-top: 72px; /* space so the fixed nav doesn't cover page content */
+	padding-bottom: 88px; /* space so footer doesn't overlap content */
 }
 
 /* Headings use Playfair Display for a more decorative serif */
@@ -74,6 +75,15 @@ h1, h2, h3 {
 	transform: translateY(-3px);
 }
 
+/* Active nav link styling */
+.top-nav .nav-list a.active,
+.top-nav .nav-list a[aria-current="page"] {
+	background: linear-gradient(90deg,#ffd9f8,#f7d3ff);
+	color: #3b003b;
+	box-shadow: 0 6px 18px rgba(180,80,160,0.18);
+	transform: translateY(-2px);
+}
+
 @media (max-width: 560px) {
 	.top-nav .nav-list {
 		gap: 8px;
@@ -82,4 +92,110 @@ h1, h2, h3 {
 	.top-nav .nav-list a { padding: 6px 8px; font-size: 14px; }
 }
 
+/* Footer social icons */
+.site-footer {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 18px;
+	z-index: 1000;
+}
 
+.site-footer .social-icons {
+	display: flex;
+	gap: 14px;
+	align-items: center;
+	background: rgba(255,255,255,0.9);
+	padding: 8px 14px;
+	border-radius: 999px;
+	box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+	backdrop-filter: blur(6px);
+}
+
+.site-footer .social-icons a {
+	color: #5b2b5b;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	transition: transform .12s ease, background .12s ease, color .12s ease;
+}
+
+.site-footer .social-icons a .icon { width: 22px; height: 22px; }
+
+.site-footer .social-icons a:hover {
+	background: #ffdff7;
+	transform: translateY(-4px);
+	color: #2b0b2b;
+}
+
+@media (max-width: 420px) {
+	.site-footer .social-icons { gap: 10px; padding: 6px 10px; }
+	.site-footer .social-icons a { width: 38px; height: 38px; }
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+text-container {
+    flex: 0 1 34em
+}
+h1{
+    font-size: 2.5em;
+}
+text.container p {
+
+    margin: .75em 0 1em 0;
+    font-size: 1.25em;
+}
+cta.button {
+    display: inline block;
+    text-decoration: none;
+    color: white;
+    background-color: #6c63fa;
+    padding: .75em 1.5em;
+    border-radius: .5em;
+    font weight: 600;
+}
+.inspirational-quote {
+  /* Core Typography */
+  font-size: 2.5rem;          /* Makes it significantly larger than normal text */
+  font-style: italic;         /* Adds that elegant slant */
+  line-height: 1.4;           /* Gives the words room to breathe */
+  color: #333;                /* Dark enough to be readable */
+  
+  /* Modern Styling Touches */
+  max-width: 800px;           /* Prevents the lines from being too long */
+  margin: 40px auto;          /* Centers the quote on the page */
+  padding: 20px 40px;         /* Adds space around the text */
+  position: relative;
+  
+  /* Inspirational Side-Accent */
+  border-left: 5px solid;     
+  border-image: linear-gradient(to bottom, #d4b163, #e5c29a) 1; /* Adds a modern gradient border */
+  
+  /* Decorative Quote Mark using Pseudo-elements */
+  &::before {
+    content: "“";
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-size: 5rem;
+    color: rgba(26, 109, 255, 0.1); /* Very light color so it doesn't distract */
+    font-family: serif;
+  }
+}
+.inspirational-quote {
+  background: linear-gradient(90deg, #804FB3, #FFD700); /* 2025 color trend: Blue to Purple */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600; /* Boldness helps the gradient show up better */
+}
+.inspirational-quote::before {
+  color: rgba(138, 43, 226, 0.1); /* Match the purple end of the gradient */
+}
