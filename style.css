@@ -163,39 +163,108 @@ cta.button {
     font weight: 600;
 }
 .inspirational-quote {
-  /* Core Typography */
-  font-size: 2.5rem;          /* Makes it significantly larger than normal text */
-  font-style: italic;         /* Adds that elegant slant */
-  line-height: 1.4;           /* Gives the words room to breathe */
-  color: #333;                /* Dark enough to be readable */
   
-  /* Modern Styling Touches */
-  max-width: 800px;           /* Prevents the lines from being too long */
-  margin: 40px auto;          /* Centers the quote on the page */
-  padding: 20px 40px;         /* Adds space around the text */
+  font-size: 2.5rem;         
+  font-style: italic;        
+  line-height: 1.4;          
+  color: #333;                
+  
+
+  max-width: 800px;          
+  margin: 40px auto;          
+  padding: 20px 40px;         
   position: relative;
   
-  /* Inspirational Side-Accent */
+ 
   border-left: 5px solid;     
-  border-image: linear-gradient(to bottom, #d4b163, #e5c29a) 1; /* Adds a modern gradient border */
+  border-image: linear-gradient(to bottom, #d4b163, #e5c29a) 1;
   
-  /* Decorative Quote Mark using Pseudo-elements */
+ 
   &::before {
     content: "“";
     position: absolute;
     top: -20px;
     left: 10px;
     font-size: 5rem;
-    color: rgba(26, 109, 255, 0.1); /* Very light color so it doesn't distract */
+    color: rgba(26, 109, 255, 0.1); 
     font-family: serif;
   }
 }
 .inspirational-quote {
-  background: linear-gradient(90deg, #804FB3, #FFD700); /* 2025 color trend: Blue to Purple */
+  background: linear-gradient(90deg, #804FB3, #FFD700); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 600; /* Boldness helps the gradient show up better */
+  font-weight: 600; 
 }
 .inspirational-quote::before {
-  color: rgba(138, 43, 226, 0.1); /* Match the purple end of the gradient */
+  color: rgba(138, 43, 226, 0.1); 
 }
+/* Container for the whole section */
+.about-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #2c2e39; 
+}
+
+/* Big Title */
+.about-title {
+    font-size: 2.5rem;
+    color: #552586; /* Deep Plum */
+    margin-bottom: 20px;
+}
+
+
+.intro-text {
+    font-size: 1.4rem;
+    color: #804FB3; /* Lighter Purple */
+    margin-bottom: 30px;
+}
+
+
+.bio-paragraph {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+
+.highlight {
+    font-weight: 600;
+    color: #552586;
+    border-bottom: 2px solid #e6e0ff; 
+    padding: 0 2px;
+}
+
+
+.mission-statement {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f8f5ff; 
+    border-left: 6px solid #552586;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #552586;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.explorer-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3); 
+    border-radius: 12px;
+    border: 1px dashed #804FB3; 
+    font-size: 1.15rem;
+}
+
+
+.explorer-section strong {
+    color: #552586;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
