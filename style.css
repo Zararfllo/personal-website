@@ -69,6 +69,18 @@ h1, h2, h3 {
 	transition: background .18s ease, transform .12s ease, color .18s ease;
 }
 
+/* Small icon styling for blog nav item */
+.top-nav .nav-list li.blog-icon a {
+    padding: 6px;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+}
+.top-nav .nav-list li.blog-icon a svg { width: 18px; height: 18px; }
+
 .top-nav .nav-list a:hover {
 	background: #efd3f2;
 	color: #111;
@@ -218,9 +230,9 @@ cta.button {
 
 
 .intro-text {
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     color: #804FB3; /* Lighter Purple */
-    margin-bottom: 30px;
+   margin-bottom: 20px;
 }
 
 
@@ -267,4 +279,24 @@ cta.button {
     letter-spacing: 1px;
     font-size: 1rem;
 }
+.profile-section {
+    display: flex;          /* Places items side-by-side */
+    align-items: center;    /* Vertically centers the text next to the image */
+    gap: 20px;              /* Adds space between the photo and the text */
+}
+
+/* Optional: ensures your text container grows to fill the remaining space */
+.Text-container {
+    flex: 1;
+}
+
+
+/* Responsive adjustment: makes them stack vertically on small phone screens */
+@media (max-width: 600px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 
