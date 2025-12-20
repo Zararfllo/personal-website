@@ -283,6 +283,15 @@ cta.button {
     display: flex;          /* Places items side-by-side */
     align-items: center;    /* Vertically centers the text next to the image */
     gap: 20px;              /* Adds space between the photo and the text */
+    margin-top: 48px;      /* push the image+text lower on the page */
+}
+
+.profile-section img {
+    width: 250px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 1em;
+    object-fit: cover;
 }
 
 /* Optional: ensures your text container grows to fill the remaining space */
